@@ -1,7 +1,6 @@
 #include "SortADT.h"
 
-
-Selection()
+void Selection()
 {
 	system("cls");
 	printf("Hello");
