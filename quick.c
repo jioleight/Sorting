@@ -1,7 +1,6 @@
 #include "SortADT.h"
 
-
-Quick()
+void Quick()
 {
 	system("cls");
 	printf("Hello");
