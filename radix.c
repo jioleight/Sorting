@@ -1,7 +1,6 @@
 #include "SortADT.h"
 
-
-Radix()
+void Radix()
 {
 	system("cls");
 	printf("Hello");
