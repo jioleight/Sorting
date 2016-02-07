@@ -1,3 +1,15 @@
+/*
+	Name: Sorting Algorithms
+	Copyright: GNU GPL v3
+	Author: Bucad, Oji Leightton Vynn-Z
+			Combate, Gene Carlo
+			Aquino, Rhoyzyl
+			Tan, Gerry
+			Sanchez, Almar
+	Date: 07/02/16 19:53
+	Description: Different types of sorting 
+			 	 algorithm in one program
+*/
 #include "SortADT.h"
 
 main()
@@ -25,7 +37,6 @@ main()
 		gotoxy(10, 12); printf("[d] Display");
 		gotoxy(10, 13); printf("[x] Exit");
 		gotoxy(30, 12); printf("Select: ");
-		//scanf("%c", &ch);
 		ch = getche();
 		
 		switch(ch)
