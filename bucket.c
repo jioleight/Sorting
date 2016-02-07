@@ -1,7 +1,6 @@
 #include "SortADT.h"
 
-
-Bucket()
+void Bucket()
 {
 	system("cls");
 	printf("Hello");
