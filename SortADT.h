@@ -20,7 +20,7 @@
 #include "comb.c"
 #include "quick.c"
 
-// since sorting naman ni murag doubly link list ang kailangan. 
+// doubly link list 
 struct NODE{
 	int val;
 	struct NODE *prv;
@@ -39,6 +39,9 @@ int arr[20];
 
 struct NODE *NEWNODE(int data);
 void tmpDATA(int data);
+void DataGen();
+int displayLL();
+int displayArr();
 
 /* For Go To X and Y */
 void gotoxy(short x, short y) 
