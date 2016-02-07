@@ -2,21 +2,10 @@
 
 main()
 {
-	char ch; // gamit character para magamit ang x which is exit
-	int i = 0, r;
+	// using char so we can use characters in switch
+	char ch; 
 	
-	// random values ang ma insert ani sa atong link list. 
-	// insert front function ra ni. once ra ni ma call
-	// para dili mag cge ilis ang data sa link list.
-	printf("Stored data in Array and Link List\n");
-	for(i; i <= 20; i++)
-	{
-		r = rand() %100; // %100 ang max number sa pag randomize
-		tmpDATA(r); // insert front function
-		arr[i] = r; // insert to array for uniformity sa data
-		printf("%d ", r); // display to check values
-	}
-	getch();
+	DataGen();
 	
 	// infinite loop unless return 0
 	while(1)
@@ -33,9 +22,11 @@ main()
 		gotoxy(30, 8);  printf("[7] Comb");
 		gotoxy(30, 9);  printf("[8] Bucket");
 		gotoxy(30, 10); printf("[9] Radix");
-		gotoxy(10, 12); printf("[x] Exit");
+		gotoxy(10, 12); printf("[d] Display");
+		gotoxy(10, 13); printf("[x] Exit");
 		gotoxy(30, 12); printf("Select: ");
-		scanf("%c", &ch);
+		//scanf("%c", &ch);
+		ch = getche();
 		
 		switch(ch)
 		{
@@ -69,6 +60,16 @@ main()
 			case '9':
 				Radix();
 				break;
+			case 'd':
+				gotoxy(10, 15);printf("Stored Data");
+				gotoxy(10, 16);printf("Link List");
+				gotoxy(10, 17);
+				displayLL();
+				gotoxy(10, 18); printf("Array List");
+				gotoxy(10, 19);
+				displayArr();
+				getch();
+				break;
 			case 'x':
 				return 0;
 				break;
@@ -79,8 +80,23 @@ main()
 		}
 	}
 }
+// data generator for array and link list
+void DataGen()
+{
+	int i = 0, r;
+	// random values ang ma insert ani sa atong link list. 
+	// insert front function ra ni. once ra ni ma call
+	// para dili mag cge ilis ang data sa link list.
+	while(i != 20)
+	{
+		r = rand() %100; // %100 ang max number sa pag randomize
+		tmpDATA(r);// insert front function
+		arr[i] = r;// insert to array for uniformity sa data
+		i++;
+	}
+}
 
-// wa man nako paman nako mahuman akong DLL mao tmp data lang sa.
+// temporary store data before inserting
 struct NODE *NEWNODE(int data)
 {
 	struct NODE *newNODE = (struct NODE*)malloc(sizeof(struct NODE));
@@ -90,7 +106,7 @@ struct NODE *NEWNODE(int data)
 	newNODE->prv = NULL;
 	return newNODE;
 }
-
+// insert front function
 void tmpDATA(int data)
 {	
 	struct NODE *tmp = NEWNODE(data);
@@ -103,4 +119,23 @@ void tmpDATA(int data)
 	head->prv = tmp;
 	tmp->nxt = head;
 	head = tmp;
+}
+// display function for link list
+int displayLL()
+{
+	struct NODE *tmp = (struct NODE *)malloc(sizeof(struct NODE));
+	tmp = head;
+	while(tmp->nxt != NULL) tmp = tmp->nxt;
+	while(tmp != NULL)
+	{
+		printf("%d ", tmp->val);
+		tmp = tmp->prv;
+	}
+}
+// display function for array
+int displayArr()
+{
+	int i = 0;
+	for(i;i < 20; i++)
+		printf("%d ", arr[i]);
 }
