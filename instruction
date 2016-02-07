@@ -1,0 +1,4 @@
+Please do not edit the main.c. only edit in your own modules. everything has already been set up. you only need to call for the head.
+do not for get to make a temporary link list for it. so that you wont be surprised that your data is corrupted. 
+
+when adding a commit. just click on your file (.c file) and click edit (pen icon top right corner).
