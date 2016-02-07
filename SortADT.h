@@ -37,6 +37,9 @@ struct NODE *head;
 // sa array implementation 20 lang ang max. 
 int arr[20];
 
+struct NODE *NEWNODE(int data);
+void tmpDATA(int data);
+
 /* For Go To X and Y */
 void gotoxy(short x, short y) 
 {
