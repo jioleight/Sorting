@@ -1,6 +1,6 @@
 #include "SortADT.h"
 
-Heap()
+void Heap()
 {
 	system("cls");
 	printf("Hello");
