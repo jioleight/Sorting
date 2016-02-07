@@ -1,7 +1,6 @@
 #include "SortADT.h"
 
-
-Merge()
+void Merge()
 {
 	system("cls");
 	printf("Hello");
