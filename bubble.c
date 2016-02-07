@@ -1,7 +1,6 @@
 #include "SortADT.h"
 
-
-Bubble()
+void Bubble()
 {
 	system("cls");
 	printf("Hello");
