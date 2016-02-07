@@ -1,7 +1,14 @@
-Please do not edit the main.c. only edit in your own modules. everything has already been set up. you only need to call for the head.
+Please do not edit the main.c. only edit in your own modules. everything has already been set up. 
+you only need to call for the head for link list and arr for array.
 do not for get to make a temporary link list for it. 
 
 when adding a commit. just click on your file (.c file) and click edit (pen icon top right corner).
 just copy paste your code. that's it.
 do not also forget to write a commit change, meaning enter what you edited in your code. 
 you may also write a detailed changes under the first text box. 
+
+if you want to display data use displayLL() for link list and displayArr() for array.
+do not use DataGen() it is only for Generating Data for the list ONCE.
+
+displaying your own UI should start at x = 10, y = 6. 
+meaning 10 spaces in x-axis and 6 new lines in y-axis before printing something. 
