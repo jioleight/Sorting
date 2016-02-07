@@ -1,6 +1,6 @@
 #include "SortADT.h"
 
-Comb()
+void Comb()
 {
 	system("cls");
 	printf("Hello");
