@@ -1,8 +1,5 @@
 #include "SortADT.h"
 
-struct NODE *NEWNODE(int data);
-void tmpDATA(int data);
-
 main()
 {
 	char ch; // gamit character para magamit ang x which is exit
