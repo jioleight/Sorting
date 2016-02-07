@@ -2,10 +2,10 @@
 	Name: Sorting Algorithms
 	Copyright: GNU GPL v3
 	Author: Bucad, Oji Leightton Vynn-Z
-			Combate, Gene Carlo
-			Aquino, Rhoyzyl
-			Tan, Gerry
-			Sanchez, Almar
+		Combate, Gene Carlo
+		Aquino, Rhoyzyl
+		Tan, Gerry
+		Sanchez, Almar
 	Date: 07/02/16 19:53
 	Description: Different types of sorting 
 			 	 algorithm in one program
