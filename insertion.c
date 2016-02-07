@@ -1,6 +1,6 @@
 #include "SortADT.h"
 
-Insertion()
+void Insertion()
 {
 	system("cls");
 	printf("Hello");
