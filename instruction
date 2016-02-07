@@ -14,3 +14,5 @@ displaying your own UI should start at x = 10, y = 6.
 meaning 10 spaces in x-axis and 6 new lines in y-axis before printing something. 
 
 when compiling, make sure you are on main.c or else it will fail. 
+
+do not forget to add comment header for your modules. 
