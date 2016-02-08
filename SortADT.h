@@ -37,12 +37,15 @@ struct NODE *head;
 // sa array implementation 20 lang ang max. 
 int arr[20];
 
+// main functions do not edit
 struct NODE *NEWNODE(int data);
 void tmpDATA(int data);
 void DataGen();
 int displayLL(short x, short y);
 int displayArr(short x, short y);
 int displaySpcfy(struct NODE *name, short x, short y);
+
+// your functions here
 
 /* For Go To X and Y */
 void gotoxy(short x, short y) 
