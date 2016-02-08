@@ -152,3 +152,18 @@ int displayArr(short x, short y)
 	for(i;i < 20; i++)
 		printf("%d ", arr[i]);
 }
+// display tmp NODE
+int displaySpcfy(struct NODE *name, short x, short y)
+{
+	struct NODE *tmp = (struct NODE *)malloc(sizeof(struct NODE));
+	tmp = name;
+	
+	gotoxy(x, y);
+	
+	while(tmp->nxt != NULL) tmp = tmp->nxt;
+	while(tmp != NULL)
+	{
+		printf("%d ", tmp->val);
+		tmp = tmp->prv;
+	}
+}
