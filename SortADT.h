@@ -44,8 +44,10 @@ void DataGen();
 int displayLL(struct NODE *nodename, short x, short y);
 int displayArr(int *arrname[], short x, short y);
 
-// your functions here
 
+// your functions here
+void partition(int arr[],int low,int high);
+void Merge(int arr[],int low,int mid,int high);
 /* For Go To X and Y */
 void gotoxy(short x, short y) 
 {
