@@ -41,9 +41,8 @@ int arr[20];
 struct NODE *NEWNODE(int data);
 void tmpDATA(int data);
 void DataGen();
-int displayLL(short x, short y);
-int displayArr(short x, short y);
-int displaySpcfy(struct NODE *name, short x, short y);
+int displayLL(struct NODE *nodename, short x, short y);
+int displayArr(int *arrname[], short x, short y);
 
 // your functions here
 
