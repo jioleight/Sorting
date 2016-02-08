@@ -1,6 +1,12 @@
 #include "SortADT.h"
 #define MAX 50
 
+void Merge(struct NODE *nodename, int *arrname[])
+{
+    system("cls");
+    MergeSort(arrname, NULL, NULL, NULL);
+    getch();
+}
 void partition(int arr[],int low,int high){
 
     int mid;
@@ -13,7 +19,7 @@ void partition(int arr[],int low,int high){
     }
 }
 
-void Merge(int arr[],int low,int mid,int high)
+void MergeSort(int arr[],int low,int mid,int high)
 {
 int i,m,k,l,temp[MAX];
 
