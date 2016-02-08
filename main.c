@@ -7,8 +7,7 @@
 		Tan, Gerry
 		Sanchez, Almar
 	Date: 07/02/16 19:53
-	Description: Different types of sorting 
-			 	 algorithm in one program
+	Description: Different types of sorting algorithm in one program
 */
 #include "SortADT.h"
 
@@ -36,7 +35,8 @@ main()
 		gotoxy(30, 10); printf("[9] Radix");
 		gotoxy(10, 12); printf("[d] Display");
 		gotoxy(10, 13); printf("[x] Exit");
-		gotoxy(30, 12); printf("Select: ");
+		gotoxy(30, 12); printf("[r] Restore Data");
+		gotoxy(30, 13); printf("Select: ");
 		ch = getche();
 		
 		switch(ch)
@@ -48,7 +48,7 @@ main()
 				Selection();
 				break;
 			case '2':
-				Merge();
+				Merge(head, arr);
 				break;
 			case '3':
 				Heap();
@@ -69,7 +69,7 @@ main()
 				Bucket();
 				break;
 			case '9':
-				Radix();
+				Radix(head, arr);
 				break;
 			case 'd':
 				gotoxy(10, 15);printf("Stored Data");
@@ -77,6 +77,11 @@ main()
 				displayLL(head, 10, 17);
 				gotoxy(10, 18); printf("Array List");
 				displayArr(arr, 10, 19);
+				getch();
+				break;
+			case 'r':
+				reset(arr);
+				gotoxy(10, 15);printf("Done!");
 				getch();
 				break;
 			case 'x':
@@ -93,14 +98,29 @@ main()
 void DataGen()
 {
 	int i = 0, r;
+	
 	// random values ang ma insert ani sa atong link list. 
 	// insert front function ra ni. once ra ni ma call
 	// para dili mag cge ilis ang data sa link list.
 	while(i != 20)
 	{
-		r = rand() %100; // %100 ang max number sa pag randomize
+		r = rand() %999; // %100 ang max number sa pag randomize
 		tmpDATA(r);// insert front function
 		arr[i] = r;// insert to array for uniformity sa data
+		i++;
+	}
+}
+// for restoring data to original generated values
+void reset(int *arrname[])
+{
+	int i = 0;
+	struct NODE *tmp = head;
+	while(tmp->nxt != NULL) tmp = tmp->nxt;
+	
+	while(tmp->prv != NULL)
+	{
+		arrname[i] = tmp->val;
+		tmp = tmp->prv;
 		i++;
 	}
 }
