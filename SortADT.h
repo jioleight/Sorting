@@ -40,8 +40,8 @@ int arr[20];
 struct NODE *NEWNODE(int data);
 void tmpDATA(int data);
 void DataGen();
-int displayLL();
-int displayArr();
+int displayLL(short x, short y);
+int displayArr(short x, short y);
 
 /* For Go To X and Y */
 void gotoxy(short x, short y) 
