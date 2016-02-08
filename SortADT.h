@@ -45,9 +45,13 @@ int displayLL(struct NODE *nodename, short x, short y);
 int displayArr(int *arrname[], short x, short y);
 
 
-// your functions here
+// your functions heren
+//mergesort functions
 void partition(int arr[],int low,int high);
 void Merge(int arr[],int low,int mid,int high);
+//combsort functions coming soon
+
+
 /* For Go To X and Y */
 void gotoxy(short x, short y) 
 {
