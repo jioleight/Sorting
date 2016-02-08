@@ -74,9 +74,9 @@ main()
 			case 'd':
 				gotoxy(10, 15);printf("Stored Data");
 				gotoxy(10, 16);printf("Link List");
-				displayLL(10, 17);
+				displayLL(head, 10, 17);
 				gotoxy(10, 18); printf("Array List");
-				displayArr(10, 19);
+				displayArr(arr, 10, 19);
 				getch();
 				break;
 			case 'x':
@@ -130,10 +130,10 @@ void tmpDATA(int data)
 	head = tmp;
 }
 // display function for link list
-int displayLL(short x, short y)
+int displayLL(struct NODE *nodename, short x, short y)
 {
 	struct NODE *tmp = (struct NODE *)malloc(sizeof(struct NODE));
-	tmp = head;
+	tmp = nodename;
 	
 	gotoxy(x, y);
 	
@@ -145,25 +145,10 @@ int displayLL(short x, short y)
 	}
 }
 // display function for array
-int displayArr(short x, short y)
+int displayArr(int *arrname[], short x, short y)
 {
 	int i = 0;
 	gotoxy(x, y);
 	for(i;i < 20; i++)
-		printf("%d ", arr[i]);
-}
-// display tmp NODE
-int displaySpcfy(struct NODE *name, short x, short y)
-{
-	struct NODE *tmp = (struct NODE *)malloc(sizeof(struct NODE));
-	tmp = name;
-	
-	gotoxy(x, y);
-	
-	while(tmp->nxt != NULL) tmp = tmp->nxt;
-	while(tmp != NULL)
-	{
-		printf("%d ", tmp->val);
-		tmp = tmp->prv;
-	}
+		printf("%d ", arrname[i]);
 }
